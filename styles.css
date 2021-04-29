@@ -22,13 +22,12 @@ img , span{
 body {
     display: grid;
     margin: 0;
-    grid-template-columns: 0.31fr 2fr 2fr;
+    grid-template-columns: 150px 860px 2fr;
     grid-gap: 10px 30px;
     grid-template-rows: 1fr 5fr auto-fill;
     grid-template-areas: "header header header"
                         ". main . "
-                        "footer footer footer"; 
-                        
+                        "footer footer footer";            
 }
 
 header {
@@ -76,8 +75,6 @@ header > .input-container {
     margin-top: 45px;  
     box-shadow: 0 0 5px 0 rgb(230, 230, 230);
 }
-
-
 
 .input-container:hover {
     box-shadow: 0 0 10px 0 gainsboro;
@@ -193,9 +190,6 @@ h2:hover {
     cursor: pointer;
 }
 
-
-
-
 .link-box {
     font-family: 'Product Sans';
     font-size: x-large; 
@@ -300,7 +294,6 @@ table {
     text-align: center;
 }
 
-
 footer {
     background-color: rgb(237, 237, 237);
     display: grid;
@@ -321,4 +314,21 @@ footer > ul > li,a {
     color: rgb(97, 97, 97);
     font-size: 1.1em;
 }
+
+/* make header sticky */
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color:white ;
+}
+
+/* Add a top margin to avoid content overlay */
+main {
+    margin-top: 150px;
+}
+
+
 
